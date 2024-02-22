@@ -18,77 +18,26 @@
     <div class="container">
         <div class="vspace"></div>
         <h1>Vape calculator</h1>
-        <!-- <div class="slidecontainer">
-            <input type="range" min="0.00" max="2.00" value="1.00" step="0.01" class="slider" id="myRange">
-        </div> -->
         <div class="vspace"></div>
         <div class="vspace"></div>
         <input type="text" class="volt" value="" />
+        <div class="vspace"></div>
         瓦數：<span id="volt-value"></span>V
         <div class="vspace"></div>
+        <div class="vspace"></div>
         <input type="text" class="ohm" value="" />
+        <div class="vspace"></div>
         歐母值：<span id="ohm-value"></span>&Omega;
+        <div class="vspace"></div>
+        <div class="vspace"></div>
         <div class="vspace"></div>
         建議功率：<span id="watts-value"></span>W
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-    <script src="assets/js/demo.js"></script>
     <script src="assets/js/ion.rangeSlider.js"></script>
-    <script>
-        $(function () {
-            console.log(`doc ready`);
-            $(".volt").ionRangeSlider({
-                skin: "big",
-                type: "single",
-                min: 3,
-                max: 4.5,
-                step: 0.01,
-                grid: true,
-                gird_num: 4,
-                grid_margin: true,
-                postfix: " V",
-                onChange: function (data) {
-                    // fired on every range slider update
-                    // alert(`changed`);
-                    // console.log(data.from);
-                    $('#volt-value').text(data.from);
-                    var v = $('#volt-value').text();
-                    var ohm = $('#ohm-value').text();
-                    var w = (v * (v / ohm)).toFixed(2);
-                    $('#watts-value').text(w);
-                },
-                onFinish: function (data) {
-                    // fired on every range slider update
-                }
-            });
-            $(".ohm").ionRangeSlider({
-                skin: "big",
-                type: "single",
-                min: 0,
-                max: 2,
-                step: 0.01,
-                grid: true,
-                gird_num: 4,
-                grid_margin: true,
-                postfix: " &Omega;",
-                onChange: function (data) {
-                    // fired on every range slider update
-                    // alert(`changed`);
-                    // console.log(data.from);
-                    $('#ohm-value').text(data.from);
-
-                },
-                onFinish: function (data) {
-                    // fired on every range slider update
-                }
-            });
-
-
-
-        });
-    </script>
+    <script src="assets/js/demo.js"></script>
     <!-- ionRangeSlider -->
     <!-- http://ionden.com/a/plugins/ion.rangeSlider/index.html -->
 </body>
