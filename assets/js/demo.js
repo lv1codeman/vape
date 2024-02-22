@@ -1,5 +1,6 @@
 $(function () {
     console.log(`doc ready`);
+    $('#watts-value').text(0);
     function cal_watts() {
         var v = $('#volt-value').text();
         var ohm = $('#ohm-value').text();
