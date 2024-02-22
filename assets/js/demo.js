@@ -1,12 +1,45 @@
-console.log(`demo.js start---`)
-// const h1 = document.getElementsByTagName("h1")[0].textContent = `sss`;
-// alert(`` + h1.length);
-
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value; // Display the default slider value
-
-// Update the current slider value (each time you drag the slider handle)
-slider.oninput = function () {
-    output.innerHTML = this.value;
-}
+$(function () {
+    console.log(`doc ready`);
+    function cal_watts() {
+        var v = $('#volt-value').text();
+        var ohm = $('#ohm-value').text();
+        var w = (v * (v / ohm)).toFixed(2);
+        $('#watts-value').text(w);
+    }
+    $(".volt").ionRangeSlider({
+        skin: "big",
+        type: "single",
+        min: 3,
+        max: 4.5,
+        step: 0.01,
+        grid: true,
+        gird_num: 4,
+        grid_margin: true,
+        postfix: " V",
+        onChange: function (data) {
+            $('#volt-value').text(data.from);
+            cal_watts();
+        },
+        onFinish: function (data) {
+            cal_watts();
+        }
+    });
+    $(".ohm").ionRangeSlider({
+        skin: "big",
+        type: "single",
+        min: 0,
+        max: 2,
+        step: 0.01,
+        grid: true,
+        gird_num: 4,
+        grid_margin: true,
+        postfix: " &Omega;",
+        onChange: function (data) {
+            $('#ohm-value').text(data.from);
+            cal_watts();
+        },
+        onFinish: function (data) {
+            cal_watts();
+        }
+    });
+});
