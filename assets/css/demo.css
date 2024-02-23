@@ -9,6 +9,13 @@
 .slidecontainer {
     width: 100%;
     /* Width of the outside container */
+    align-self: flex-end;
+}
+
+.slidecomponent {
+    display: flex;
+    justify-content: center;
+    height: 70vh;
 }
 
 /* The slider itself */
