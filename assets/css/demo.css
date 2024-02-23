@@ -15,7 +15,7 @@
 .slidecomponent {
     display: flex;
     justify-content: center;
-    height: 70vh;
+    height: 60vh;
 }
 
 /* The slider itself */
