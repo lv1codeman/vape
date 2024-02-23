@@ -15,7 +15,7 @@
 .slidecomponent {
     display: flex;
     justify-content: center;
-    height: 55vh;
+    height: 50vh;
 }
 
 /* The slider itself */
@@ -88,4 +88,12 @@
     bottom: auto;
     font-size: 1rem;
     padding: 0 1px;
+}
+
+#watts-value {
+    color: white;
+    text-shadow: none;
+    padding: 1px 5px;
+    border-radius: 3px;
+    background: linear-gradient(to bottom, #428bca 0%, #3071a9 100%);
 }
