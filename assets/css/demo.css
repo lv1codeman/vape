@@ -53,3 +53,39 @@
     background: #04AA6D;
     cursor: pointer;
 }
+
+
+
+/* 覆寫ion.rangeSlider.css 更改元件大小 */
+.irs--big .irs-handle {
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.irs--big .irs-line {
+    top: 28px;
+    height: 25px;
+}
+
+.irs--big .irs-bar {
+    top: 28px;
+    height: 25px;
+}
+
+.irs-grid-pol {
+    top: 3px;
+    height: 15px;
+}
+
+.irs-grid-pol.small {
+    height: 15px;
+}
+
+.irs-grid-text {
+    top: 22px;
+    bottom: auto;
+    font-size: 1rem;
+    padding: 0 1px;
+}
